@@ -8,7 +8,7 @@ export default function Header() {
     <header className="bg-white shadow-sm fixed w-full top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div className="flex items-center">
-          <span className="text-2xl font-bold text-indigo-600">TechHub</span>
+          <span className="text-2xl font-bold text-indigo-600">TAQNIK</span>
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
