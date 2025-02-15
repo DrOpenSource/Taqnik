@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Newsletter from './components/Newsletter';
 import ProductCard from './components/ProductCard';
@@ -10,7 +10,10 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfUse from './components/TermsOfUse';
 import { Container, Grid } from '@mui/material';
 
+const LetAIBuildIt = lazy(()=>import("./Let-AI-Build-It"))
+
 const App: React.FC = () => {
+
   const products = [
     {
       id: 1,
@@ -197,6 +200,7 @@ If you have any questions or suggestions about the Terms and Conditions, please 
             path="/product/:id/:name/terms-of-use" 
             element={<TermsOfUse products={products} />} 
           />
+         <Route path="/Let-AI-Build-It" element={<Suspense fallback={<div>Loading XYZ...</div>}><LetAIBuildIt /></Suspense>} />
         </Routes>
         <Newsletter />
       </div>
