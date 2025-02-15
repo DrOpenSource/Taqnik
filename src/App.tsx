@@ -170,14 +170,14 @@ If you have any questions or suggestions about the Terms and Conditions, please 
   return (
     <Router>
       <div className="App">
-        <Header />
+      <Header />
         <Routes>
         <Route path="/" element={<Suspense fallback={<div>Loading Let AI Build It...</div>}><LetAIBuildIt /></Suspense>} />
           <Route path="products" element={
-            <main className="pt-16">
-              <section id="products" className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-8">Product Catalog</h2>
+      <main className="pt-16">
+        <section id="products" className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Product Catalog</h2>
                   <Container sx={{ py: 8 }} maxWidth="lg">
                     <Grid container spacing={4}>
                       {products.map((product) => (
@@ -187,8 +187,8 @@ If you have any questions or suggestions about the Terms and Conditions, please 
                       ))}
                     </Grid>
                   </Container>
-                </div>
-              </section>
+          </div>
+        </section>
               {/* Blog and AI Tools sections */}
             </main>
           } />
@@ -204,7 +204,7 @@ If you have any questions or suggestions about the Terms and Conditions, please 
          
         </Routes>
         <Newsletter />
-      </div>
+          </div>
     </Router>
   );
 };
