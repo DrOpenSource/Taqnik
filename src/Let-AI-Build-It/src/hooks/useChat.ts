@@ -28,7 +28,7 @@ export const useChat = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5678/webhook/f7cafdb6-80d9-4d1b-b71d-3318f84a959a",
+        "https://xdev200.app.n8n.cloud/webhook/f7cafdb6-80d9-4d1b-b71d-3318f84a959a",
         {
           method: "POST",
           headers: {
