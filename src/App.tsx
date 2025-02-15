@@ -172,7 +172,8 @@ If you have any questions or suggestions about the Terms and Conditions, please 
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={
+        <Route path="/" element={<Suspense fallback={<div>Loading Let AI Build It...</div>}><LetAIBuildIt /></Suspense>} />
+          <Route path="products" element={
             <main className="pt-16">
               <section id="products" className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,7 +201,7 @@ If you have any questions or suggestions about the Terms and Conditions, please 
             path="/product/:id/:name/terms-of-use" 
             element={<TermsOfUse products={products} />} 
           />
-         <Route path="/Let-AI-Build-It" element={<Suspense fallback={<div>Loading XYZ...</div>}><LetAIBuildIt /></Suspense>} />
+         
         </Routes>
         <Newsletter />
       </div>

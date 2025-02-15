@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from 'react-markdown';
 import { ChatMessagesProps } from "../types";
 import styled from '@emotion/styled';
 
@@ -164,7 +165,10 @@ ${typeof subValue === 'object' && subValue !== null
           </SenderLabel>
           <MarkdownContainer>
            
+            
+            <ReactMarkdown>
               {msg.sender === "llm" ? formatJSON(msg.text) : msg.text}
+            </ReactMarkdown>
             
           </MarkdownContainer>
         </MessageContainer>
